@@ -7,5 +7,5 @@ public:
    string dato;
    Node *right;
    Node *left;
-
+   Node *son;
 };

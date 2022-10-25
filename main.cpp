@@ -1,24 +1,53 @@
+#include<fstream>
 #include <iostream>
-#include "BigTree.h"
+#include <cstdlib>
+#include "NumberTree.h"
 using namespace std;
-#include "File.h"
 
 int main() {
-    Node *root= new Node();
-    BigTree *bigTree= new BigTree();
-    string date;
-    cout<<"Ingrese el nuevo dato"<<endl;
-    cin>>date;
-    bigTree->addBigTree(root, date);
-    cout<<"Ingrese el nuevo dato"<<endl;
-    cin>>date;
-    bigTree->addBigTree(root, date);
-    cout<<"Ingrese el nuevo dato"<<endl;
-    cin>>date;
-    bigTree->addBigTree(root, date);
-    bigTree->showInOrder(root);
+    NumberTree *tree= new NumberTree();
+    string cadena="";
+    fstream fe("C:\\Users\\luisa\\OneDrive\\Escritorio\\untitled\\Hola.txt");
+    while (!fe.eof()) {
 
-    File *file= new File();
-    file->leerArch();
+        fe >> cadena;
+
+
+            string numero;
+            for (int i = 0; i < cadena.length(); i++) {
+                if (isdigit(cadena[i]) !=  0) {
+                     numero += cadena[i];
+
+                }
+                else if(cadena[i]=='m')
+                {
+
+                }
+
+            }
+        cout<<numero<<endl;
+
+
+
+
+
+
+
+        /*if (cadena[0]=='m') {
+            string text= "";
+
+            for(int i=2; i< cadena.length(); i++) {
+                if (typeid(cadena[i]) == typeid(char)) {
+                    text+=cadena[i];
+                }
+                cout<<text<<"Este es el text"<<endl;
+            }
+
+        }
+*/
+
+        }
+
+    fe.close();
     return 0;
 }
