@@ -2,7 +2,7 @@
 // Created by luisa on 24/10/2022.
 //
 
-#include "NumberTree.h"
+#include "NodeNumber.cpp"
 
 void NumberTree::addNumberTree(NodeNumber *& tree, int date)
 {
