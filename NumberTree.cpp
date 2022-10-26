@@ -34,3 +34,13 @@ void NumberTree::addNumberTree(NodeNumber *& tree, int date)
         }
     }
 }
+
+void NumberTree:: showNumberTree(NodeNumber *tree) {
+    if (tree == NULL)
+        return;
+    else {
+        showNumberTree(tree->left);
+        cout << tree->dato << endl;
+        showNumberTree(tree->right);
+    }
+}
